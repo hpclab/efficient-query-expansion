@@ -6,6 +6,7 @@ import sys
 base_dir = os.path.dirname(os.path.abspath(__file__)) + "/"
 # add the python libraries to the sys path
 sys.path.append(base_dir + "lib/python/")
+sys.path.append(base_dir + "lib/cpp/")
 
 # other directories
 raw_dir = base_dir + "raw/"

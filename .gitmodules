@@ -10,3 +10,6 @@
 [submodule "lib/cpp/ds2i_query_server"]
 	path = lib/cpp/ds2i_query_server
 	url = https://github.com/roberto-trani/ds2i_query_server
+[submodule "lib/cpp/pattern_matching"]
+	path = lib/cpp/pattern_matching
+	url = https://github.com/roberto-trani/pattern_matching.git
