@@ -1,0 +1,12 @@
+[submodule "lib/python/parallel_stream"]
+	path = lib/python/parallel_stream
+	url = https://github.com/roberto-trani/parallel_stream.git
+[submodule "lib/python/wikiextractor"]
+	path = lib/python/wikiextractor
+	url = https://github.com/attardi/wikiextractor
+[submodule "lib/python/progress_bar"]
+	path = lib/python/progress_bar
+	url = https://github.com/roberto-trani/progress_bar.git
+[submodule "lib/cpp/ds2i_query_server"]
+	path = lib/cpp/ds2i_query_server
+	url = https://github.com/roberto-trani/ds2i_query_server
