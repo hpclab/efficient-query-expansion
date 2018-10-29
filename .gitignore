@@ -1,2 +1,4 @@
 .ipynb_checkpoints/
 *.pyc
+*.so
+/lib/cython/*/*.cpp

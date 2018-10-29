@@ -10,6 +10,8 @@ if __name__ ==  "__main__":
         os.mkdir(cfg.processed_dir)
     if not os.path.exists(cfg.thesaurus_dir):
         os.mkdir(cfg.thesaurus_dir)
+    if not os.path.exists(cfg.training_dir):
+        os.mkdir(cfg.training_dir)
     if not os.path.exists(cfg.tmp_dir):
         os.mkdir(cfg.tmp_dir)
 
