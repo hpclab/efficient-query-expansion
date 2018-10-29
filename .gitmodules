@@ -13,3 +13,6 @@
 [submodule "lib/cpp/pattern_matching"]
 	path = lib/cpp/pattern_matching
 	url = https://github.com/roberto-trani/pattern_matching.git
+[submodule "lib/cpp/buffered_stream"]
+	path = lib/cpp/buffered_stream
+	url = https://github.com/roberto-trani/buffered_stream.git

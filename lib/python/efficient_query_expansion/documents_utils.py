@@ -1,6 +1,11 @@
+import codecs
+import gzip
 import nltk
-from utils import get_reader, get_emitter_from_generator
+import os.path
+import sys
+
 from normalize_text import normalize_text, normalize_text_step_1
+from parallel_stream.utils import get_emitter_from_iterable
 
 
 class Doc(object):
@@ -164,6 +169,24 @@ def _xml_extractor_reader_to_doc_generator(reader):
         raise Exception("A content was expected before the end of file")
 
 
+def get_reader(infilename, encoding=None):
+    if infilename == "-":
+        reader = sys.stdin
+    else:
+        if not os.path.isfile(infilename):
+            raise Exception("File {} doesn't exist".format(infilename))
+
+        if infilename.endswith(".gz"):
+            reader = gzip.open(infilename, "rb")
+        else:
+            reader = open(infilename, "r")
+
+    if encoding is None or encoding.upper() == "ASCII":
+        return reader
+
+    return codecs.getreader(encoding)(reader)
+
+
 def doc_generator_from_file(infilenames, encoding=None, file_format="custom"):
     if isinstance(infilenames, (str, unicode)):
         infilenames = [infilenames]
@@ -197,7 +220,7 @@ def sentence_generator_from_doc_file(*args, **kwargs):
 
 
 def get_doc_emitter_from_files(*args, **kwargs):
-    return get_emitter_from_generator(doc_generator_from_file(*args, **kwargs))
+    return get_emitter_from_iterable(doc_generator_from_file(*args, **kwargs))
 
 
 def get_doc_normalizer_worker():
