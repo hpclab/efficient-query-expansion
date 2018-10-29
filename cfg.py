@@ -16,6 +16,7 @@ sys.path.append(lib_dir + "cython/")
 processed_dir = data_dir + "processed/"
 raw_dir       = data_dir + "raw/"
 thesaurus_dir = data_dir + "thesaurus/"
+training_dir  = data_dir + "training/"
 tmp_dir       = data_dir + "tmp/"
 
 # number of parts the wikipedia file must be splitted to
